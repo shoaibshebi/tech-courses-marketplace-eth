@@ -4,11 +4,11 @@ import { useAccount } from "@components/web3/hooks/useAccount";
 
 export default function index() {
   const { connect, connected } = useWeb3();
-  const { account } = useAccount();
+  const { account } = useAccount()((hooks: any) => hooks.useAccount());
 
   return (
     <section>
-      {account}
+      {"account => " + account}
       <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
           <div className="flex justify-between">
