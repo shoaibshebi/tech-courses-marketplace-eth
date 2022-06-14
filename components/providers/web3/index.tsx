@@ -45,7 +45,7 @@ export default function Web3Provider({ children }: IProps) {
     const { provider, web3 } = web3Api;
     return {
       ...web3Api,
-      getHooks: () => setupHooks(web3),
+      getHooks: () => setupHooks(web3, provider),
       connect: provider
         ? async () => {
             try {
