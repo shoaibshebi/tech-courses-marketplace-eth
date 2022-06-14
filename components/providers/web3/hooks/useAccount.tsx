@@ -20,6 +20,7 @@ export const handler = (web3: any, provider: any) => () => {
         mutate(accounts[0] ?? null)
       );
   }, []);
+
   return {
     account: {
       data,

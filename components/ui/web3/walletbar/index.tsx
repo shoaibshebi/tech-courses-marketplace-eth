@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function Walletbar({ address }: { address: string }) {
+export default function Walletbar({
+  address,
+  network,
+}: {
+  address: string;
+  network: string;
+}) {
   return (
     <section className="text-white bg-indigo-600 rounded">
       <div className="p-8">
@@ -22,7 +28,7 @@ export default function Walletbar({ address }: { address: string }) {
           <div>
             <div>
               <span>Currently on </span>
-              <strong className="text-2xl">Ethereum Main Network</strong>
+              <strong className="text-2xl">{network}</strong>
             </div>
           </div>
         </div>
