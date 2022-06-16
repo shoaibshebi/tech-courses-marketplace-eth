@@ -1,16 +1,12 @@
+import { useWalletInfo } from "@components/hooks/web3";
 import React from "react";
 
-export default function Walletbar({
-  address,
-  network,
-}: {
-  address: string;
-  network: string;
-}) {
+export default function Walletbar() {
+  const { account, network } = useWalletInfo();
   return (
     <section className="text-white bg-indigo-600 rounded">
       <div className="p-8">
-        <h1 className="text-2xl">Hello, {address}</h1>
+        <h1 className="text-2xl">Hello, {account.data}</h1>
         <h2 className="subtitle mb-5 text-xl">
           I hope you are having a great day!
         </h2>
@@ -27,8 +23,21 @@ export default function Walletbar({
           </div>
           <div>
             <div>
-              <span>Currently on </span>
-              <strong className="text-2xl">{network}</strong>
+              {!network.isSupported && network.hasInitialResponse && (
+                <div className="bg-red-400 p-4 rounded-lg">
+                  <div>Connected to wrong network</div>
+                  <div>
+                    Connect to: {` `}
+                    <strong className="text-2xl">{network.target}</strong>
+                  </div>
+                </div>
+              )}
+              {network.data && (
+                <div>
+                  <span>Currently on </span>
+                  <strong className="text-2xl">{network.data}</strong>
+                </div>
+              )}
             </div>
           </div>
         </div>

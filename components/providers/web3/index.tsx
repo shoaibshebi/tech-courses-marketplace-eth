@@ -18,6 +18,8 @@ export default function Web3Provider({ children }: IProps) {
     web3: null,
     isInitialized: false,
     connected: false,
+    isLoading: true,
+    hooks: setupHooks(),
   });
 
   //its for to load provider
@@ -30,6 +32,8 @@ export default function Web3Provider({ children }: IProps) {
           provider,
           web3,
           contract: null,
+          isLoading: false,
+          hooks: setupHooks(web3, provider),
           isInitialized: true,
         });
       } else {
@@ -40,11 +44,13 @@ export default function Web3Provider({ children }: IProps) {
 
     loadProvider();
   }, []);
-  //its for the pupose to connect the provider to the metmask account
+  //its for the pupose to connect the provider to the metmask account,
+  //and also extending the web3Api useState variable
   const _web3Api = useMemo(() => {
-    const { provider, web3 } = web3Api;
+    const { provider, web3, isLoading } = web3Api;
     return {
       ...web3Api,
+      requireInstall: !isLoading && !web3,
       getHooks: () => setupHooks(web3, provider),
       connect: provider
         ? async () => {
@@ -71,7 +77,6 @@ export function useWeb3() {
 }
 
 export function useHooks(cb: any) {
-  const { getHooks } = useWeb3();
-  const hooks = getHooks();
+  const { hooks } = useWeb3();
   return cb(hooks);
 }

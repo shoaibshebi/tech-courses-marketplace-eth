@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ICourse {
   id: Number | null | undefined;
   type: string;
@@ -9,4 +11,8 @@ export interface ICourse {
   slug: string;
   wsl: string[];
   createdAt: string;
+}
+
+export interface IChildrenProp {
+  children: React.ReactNode;
 }

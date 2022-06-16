@@ -1,28 +1,50 @@
-import type { NextPage } from "next";
-
-import { CourseList } from "@components/ui/course";
+import { useState } from "react";
+import { CourseCard, CourseList } from "@components/ui/course";
 import { BaseLayout } from "@components/ui/layout";
 import { getAllCourses } from "@content/courses/fetcher";
-import Walletbar from "@components/ui/web3/walletbar";
-import { useAccount } from "@components/hooks/web3/useAccount";
-import { useNetwork } from "@components/hooks/web3/useNetwork";
+import { useWalletInfo } from "@components/hooks/web3";
+import { Button } from "@components/ui/common";
+import { OrderModal } from "@components/ui/order";
+import { MarketHeader } from "@components/ui/marketplace";
 
-const MarketPlace = ({ courses }: any) => {
-  const { account } = useAccount();
-  const { network } = useNetwork();
-  console.log("network", network);
-  console.log("da ", account);
+export default function Marketplace({ courses }: { courses: any }) {
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  const { canPurchaseCourse } = useWalletInfo();
+
   return (
     <>
-      {"account=>" + account}
-      {"network=>" + network}
-      <div className="py-5">
-        <Walletbar address={account?.data} network={network} />
+      <div className="py-4">
+        <MarketHeader />
       </div>
-      <CourseList courses={courses} />
+      <CourseList courses={courses}>
+        {(course: any) => (
+          <CourseCard
+            key={course.id}
+            course={course}
+            disabled={!canPurchaseCourse}
+            Footer={() => (
+              <div className="mt-4">
+                <Button
+                  onClick={() => setSelectedCourse(course)}
+                  disabled={!canPurchaseCourse}
+                  variant="lightPurple"
+                >
+                  Purchase
+                </Button>
+              </div>
+            )}
+          />
+        )}
+      </CourseList>
+      {selectedCourse && (
+        <OrderModal
+          course={selectedCourse}
+          onClose={() => setSelectedCourse(null)}
+        />
+      )}
     </>
   );
-};
+}
 
 export function getStaticProps() {
   const { data } = getAllCourses();
@@ -33,5 +55,4 @@ export function getStaticProps() {
   };
 }
 
-MarketPlace.Layout = BaseLayout;
-export default MarketPlace;
+Marketplace.Layout = BaseLayout;

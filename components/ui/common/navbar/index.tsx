@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useWeb3 } from "@components/providers";
-import { useAccount } from "@components/hooks/web3/useAccount";
+import { useAccount } from "@components/hooks/web3";
 
-export default function index() {
-  const { connect, connected } = useWeb3();
+export default function Navbar() {
+  const { connect, connected, web3 } = useWeb3();
   const { pathname } = useRouter();
-  const { account } = useAccount()((hooks: any) => hooks.useAccount());
+  const { account } = useAccount();
 
   return (
     <section>
