@@ -41,7 +41,7 @@ export default function EthRates() {
                   width="35"
                   src="/small-eth.webp"
                 />
-                <span className="text-2xl font-bold">= {COURSE_PRICE}$</span>
+                <span className="text-2xl font-bold">=$</span>
               </>
             ) : (
               <div className="w-full flex justify-center">
