@@ -5,37 +5,51 @@ const { createContext, useContext, useEffect, useState } = require("react");
 import detectEthereumProvider from "@metamask/detect-provider";
 import { useMemo } from "react";
 import Web3 from "web3";
+import { loadContract } from "@utils/loadContract";
 
 interface IProps {
   children: React.ReactNode;
 }
 
 const Web3Context = createContext(null);
+const createWeb3State = ({ web3, provider, contract, isLoading }) => {
+  return {
+    web3,
+    provider,
+    contract,
+    isLoading,
+    hooks: setupHooks({ web3, provider, contract }),
+  };
+};
 
 export default function Web3Provider({ children }: IProps) {
-  const [web3Api, setWeb3Api] = useState({
-    provider: null,
-    web3: null,
-    isInitialized: false,
-    connected: false,
-    isLoading: true,
-    hooks: setupHooks(),
-  });
+  const [web3Api, setWeb3Api] = useState(
+    createWeb3State({
+      web3: null,
+      provider: null,
+      contract: null,
+      isLoading: true,
+    })
+  );
 
   //its for to load provider
   useEffect(() => {
     const loadProvider = async () => {
       const provider: any = await detectEthereumProvider();
+
       if (provider) {
         const web3 = new Web3(provider);
-        setWeb3Api({
-          provider,
-          web3,
-          contract: null,
-          isLoading: false,
-          hooks: setupHooks(web3, provider),
-          isInitialized: true,
-        });
+        //loadcontract from utils
+        const contract = await loadContract("CourseMarketplace", web3);
+
+        setWeb3Api(
+          createWeb3State({
+            web3,
+            provider,
+            contract,
+            isLoading: false,
+          })
+        );
       } else {
         setWeb3Api((api: any) => ({ ...api, isInitialized: true }));
         console.error("Please, install Metamask.");

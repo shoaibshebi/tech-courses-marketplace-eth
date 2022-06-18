@@ -2,10 +2,14 @@ import { Button, Message } from "@components/ui/common";
 import { OwnedCourseCard } from "@components/ui/course";
 import { BaseLayout } from "@components/ui/layout";
 import { MarketHeader } from "@components/ui/marketplace";
+import { useOwnedCourses } from "@components/hooks/web3";
 
 export default function OwnedCourses() {
+  const { ownedCourses } = useOwnedCourses();
+  console.log("ownedcours:", ownedCourses.data);
   return (
     <>
+      {ownedCourses.data}
       <div className="py-4">
         <MarketHeader />
       </div>

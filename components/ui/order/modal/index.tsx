@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 interface IProps {
   course: any;
   onClose: any;
+  onSubmit: any;
 }
 
 const defaultOrder = {
@@ -189,10 +190,7 @@ const OrderModal = ({ course, onClose, onSubmit }: IProps) => {
         <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex">
           <Button
             disabled={formState.isDisabled}
-            onClick={() => {
-              alert(JSON.stringify(order));
-              //   onSubmit(order);
-            }}
+            onClick={() => onSubmit(order)}
           >
             Submit
           </Button>

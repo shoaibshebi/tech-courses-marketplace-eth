@@ -82,6 +82,9 @@ contract CourseMarketplace{
      function hasCourseOwnership(bytes32 courseHash) private view returns(bool){
          return ownedCourses[courseHash].owner == msg.sender;
      }
+
+     ////////////
+    
 }
 
 //course id = 10 ni Ascii text
