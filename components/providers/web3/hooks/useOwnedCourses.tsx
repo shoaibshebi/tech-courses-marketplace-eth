@@ -36,6 +36,5 @@ export const handler =
         return ownedCourses;
       }
     );
-
     return swrRes;
   };

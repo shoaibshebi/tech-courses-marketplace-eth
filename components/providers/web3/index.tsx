@@ -2,9 +2,9 @@ import { setupHooks } from "./hooks/setupHooks";
 
 const { createContext, useContext, useEffect, useState } = require("react");
 
-import detectEthereumProvider from "@metamask/detect-provider";
-import { useMemo } from "react";
 import Web3 from "web3";
+import { useMemo } from "react";
+import detectEthereumProvider from "@metamask/detect-provider";
 import { loadContract } from "@utils/loadContract";
 
 interface IProps {
