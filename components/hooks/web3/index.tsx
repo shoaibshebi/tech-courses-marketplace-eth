@@ -1,9 +1,25 @@
 import { useHooks } from "@components/providers/web3";
 
+const _isEmpty = (data) => {
+  return (
+    data == null ||
+    data === "" ||
+    (Array.isArray(data) && data.length === 0) ||
+    (data.constructor === Object && Object.keys(data).length === 0)
+  );
+};
+
+//these are such properties, which were common so implemented through enhanceHook
+//and wrapped all other by this
 const enhanceHook = (swrRes) => {
+  const { data, error } = swrRes;
+  const hasInitialResponse = !!(data || error);
+  const isEmpty = hasInitialResponse && _isEmpty(data);
+
   return {
     ...swrRes,
-    hasInitialResponse: swrRes.data || swrRes.error,
+    isEmpty,
+    hasInitialResponse,
   };
 };
 
@@ -21,10 +37,21 @@ export const useAccount = () => {
   };
 };
 
-export const useOwnedCourses = () => {
-  const res = useHooks((hooks) => hooks.useOwnedCourses)();
+export const useOwnedCourses = (...args) => {
+  const swrRes = enhanceHook(
+    useHooks((hooks) => hooks.useOwnedCourses)(...args)
+  );
   return {
-    ownedCourses: { data: res },
+    ownedCourses: swrRes,
+  };
+};
+
+export const useOwnedCourse = (...args) => {
+  const swrRes = enhanceHook(
+    useHooks((hooks) => hooks.useOwnedCourse)(...args)
+  );
+  return {
+    ownedCourse: swrRes,
   };
 };
 

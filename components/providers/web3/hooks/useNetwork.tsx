@@ -13,7 +13,6 @@ const NETWORKS = {
 
 const targetNetwork =
   NETWORKS[process.env.NEXT_PUBLIC_TARGET_CHAIN_ID as keyof unknown];
-console.log("id ", process.env.NEXT_PUBLIC_TARGET_CHAIN_ID);
 
 export const handler = (web3: any, provider: any) => () => {
   const { data, mutate, ...rest } = useSWR(
@@ -21,14 +20,20 @@ export const handler = (web3: any, provider: any) => () => {
     async () => {
       // const netId = await web3.eth.net.getId();
       const chainId = await web3.eth.getChainId(); //this is the cahin id, in hex format
+      if (!chainId) {
+        throw new Error("Cannot retreive network. Please refresh the browser.");
+      }
       return NETWORKS[chainId as keyof unknown];
     }
   );
   useEffect(() => {
-    provider &&
-      provider.on("chainChanged", (chainId: string) =>
-        mutate(NETWORKS[parseInt(chainId, 16) as keyof unknown])
-      );
+    const mutator = (chainId: any) =>
+      mutate(NETWORKS[parseInt(chainId, 16) as keyof unknown]);
+    provider?.on("chainChanged", mutator);
+
+    return () => {
+      provider?.removeListener("chainChanged", mutator);
+    };
   }, []);
   return {
     data,

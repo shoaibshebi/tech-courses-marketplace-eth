@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface ICourse {
   id: Number | null | undefined;
   type: string;
@@ -12,7 +10,11 @@ export interface ICourse {
   wsl: string[];
   createdAt: string;
 }
-
 export interface IChildrenProp {
   children: React.ReactNode;
+}
+interface IProps {
+  web3: any;
+  provider: any;
+  contract: any;
 }

@@ -28,11 +28,13 @@ export default function Card({
             {course.type}
           </div>
           <Link href={`/courses/${course.slug}`}>
-            <a className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+            <a className="h-12 block mt-1 text-sm sm:text-lg leading-tight font-medium text-black hover:underline">
               {course.title}
             </a>
           </Link>
-          <p className="mt-2 text-gray-500">{course.description}</p>
+          <p className="mt-2 text-sm sm:text-base text-gray-500">
+            {course.description}
+          </p>
           {Footer && <Footer />}
         </div>
       </div>

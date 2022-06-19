@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import useSWR, { mutate } from "swr";
 
 export const COURSE_PRICE = 15;

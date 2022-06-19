@@ -11,8 +11,20 @@ interface IProps {
   children: React.ReactNode;
 }
 
+interface IPropsState {
+  web3: any;
+  provider: any;
+  contract: any;
+  isLoading: any;
+}
+
 const Web3Context = createContext(null);
-const createWeb3State = ({ web3, provider, contract, isLoading }) => {
+const createWeb3State = ({
+  web3,
+  provider,
+  contract,
+  isLoading,
+}: IPropsState) => {
   return {
     web3,
     provider,
@@ -65,7 +77,7 @@ export default function Web3Provider({ children }: IProps) {
     return {
       ...web3Api,
       requireInstall: !isLoading && !web3,
-      getHooks: () => setupHooks(web3, provider),
+      getHooks: () => setupHooks({ web3, provider, contract }),
       connect: provider
         ? async () => {
             try {

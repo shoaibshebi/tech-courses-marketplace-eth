@@ -1,4 +1,4 @@
-import { useEthPrice } from "@components/providers/web3/useEthPrice";
+import { useEthPrice } from "@components/hooks/useEthPrice";
 import { Loader } from "@components/ui/common";
 import Image from "next/image";
 import React from "react";
