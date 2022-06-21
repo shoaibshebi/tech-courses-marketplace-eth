@@ -34,6 +34,8 @@ contract CourseMarketplace{
     error CourseIsNotCreated();
     /// Course in not valid!
     error InvalidState();
+    /// Sender is not course owner!
+    error SenderIsNotCourseOwner();
 
      constructor(){
          //setting for the owner of the contract At Deploy Time
@@ -63,6 +65,23 @@ contract CourseMarketplace{
              owner: msg.sender,
              state: State.Purchased
          });
+     }
+     function repurchaseCourse(bytes32 courseHash) external payable { 
+         if(!isCourseCreated(courseHash)){
+             revert CourseIsNotCreated();
+         }
+         if(!hasCourseOwnership(courseHash)){
+             revert SenderIsNotCourseOwner();
+         }
+
+        Course storage course = ownedCourses[courseHash];
+
+        if(course.state != State.DeaActivated){
+            revert InvalidState();
+        }
+
+        course.state = State.Purchased;
+        course.price = msg.value;
      }
      function activateCourse(bytes32 courseHash) external onlyOwner {
          if(!isCourseCreated(courseHash)){
@@ -117,7 +136,6 @@ contract CourseMarketplace{
     function isCourseCreated(bytes32 courseHash) private view returns(bool) {
          return ownedCourses[courseHash].owner  != 0x0000000000000000000000000000000000000000;
      }
-    
 }
 
 //course id = 10 ni Ascii text
