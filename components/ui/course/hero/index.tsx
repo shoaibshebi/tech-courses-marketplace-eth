@@ -37,7 +37,7 @@ export default function Hero({
                   <span className="block xl:inline">
                     {title.substring(0, title.length / 2)}
                   </span>
-                  <span className="block text-indigo-600 xl:inline">
+                  <span className="block text-turk xl:inline">
                     {title.substring(title.length / 2)}
                   </span>
                 </h1>
@@ -45,10 +45,10 @@ export default function Hero({
                   {description}
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
+                  <div className="rounded-full shadow">
                     <a
                       href="#"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-turk hover:bg-turk md:py-4 md:text-lg md:px-10"
                     >
                       Get started
                     </a>
@@ -56,7 +56,7 @@ export default function Hero({
                   <div className="mt-3 sm:mt-0 sm:ml-3">
                     <a
                       href="#"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-turk hover:bg-turk md:py-4 md:text-lg md:px-10"
                     >
                       Watch
                     </a>

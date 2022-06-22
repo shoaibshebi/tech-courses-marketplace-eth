@@ -24,7 +24,7 @@ export default function Breadcrumbs({
 }) {
   return (
     <nav aria-label="breadcrumb">
-      <ol className="flex leading-none text-indigo-600 divide-x divide-indigo-400">
+      <ol className="flex leading-none text-turk divide-x divide-turk">
         {items.map((item: any, i: number) => (
           <React.Fragment key={item.href}>
             {!item.requireAdmin && <BreadcrumbItem item={item} index={i} />}

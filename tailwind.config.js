@@ -17,6 +17,9 @@ module.exports = {
       maxWidth: {
         "8xl": "1920px",
       },
+      colors: {
+        turk: "#42a586",
+      },
     },
   },
   variants: {

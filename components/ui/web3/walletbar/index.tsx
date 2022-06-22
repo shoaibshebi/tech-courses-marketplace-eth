@@ -4,7 +4,7 @@ import { Button } from "@components/ui/common";
 export default function Walletbar() {
   const { account, network } = useWalletInfo();
   return (
-    <section className="text-white bg-indigo-600 rounded">
+    <section className="text-white bg-turk rounded">
       <div className="p-8">
         <h1 className="text-base xs:text-xl break-words">
           Hello, {account.data}
@@ -15,7 +15,12 @@ export default function Walletbar() {
         <div className="flex justify-between items-center">
           <div className="sm:flex sm:justify-center lg:justify-start">
             <Button className="mr-2 text-sm xs:text-lg p-2" variant="white">
-              Learn how to purchase
+              <a
+                href="https://www.youtube.com/watch?v=YVgfHZMFFFQ"
+                target="_blank"
+              >
+                Don't have account on metamask ? Click here
+              </a>
             </Button>
           </div>
           <div>

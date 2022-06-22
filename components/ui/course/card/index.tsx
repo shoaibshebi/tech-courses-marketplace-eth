@@ -24,7 +24,7 @@ export default function Card({
           />
         </div>
         <div className="p-8">
-          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+          <div className="uppercase tracking-wide text-sm text-turk font-semibold">
             {course.type}
           </div>
           <Link href={`/courses/${course.slug}`}>

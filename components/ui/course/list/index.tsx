@@ -11,7 +11,10 @@ export default function List({
   children: Function;
 }) {
   return (
-    <section className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 mb-5">
+    <section
+      className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 mb-5"
+      id="courses"
+    >
       {courses.map((course, i) => (
         <div key={i}>{children(course)}</div>
       ))}

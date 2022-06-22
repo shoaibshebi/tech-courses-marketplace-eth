@@ -77,7 +77,7 @@ export default function Curriculum({
                           <>
                             {courseState === "deactivated" && (
                               <Link href="/marketplace">
-                                <a className="text-indigo-600 hover:text-indigo-900">
+                                <a className="text-turk hover:text-turk">
                                   Get Access
                                 </a>
                               </Link>
@@ -92,9 +92,7 @@ export default function Curriculum({
                           </>
                         ) : (
                           <Link href="/watch">
-                            <a className="text-indigo-600 hover:text-indigo-900">
-                              Watch
-                            </a>
+                            <a className="text-turk hover:text-turk">Watch</a>
                           </Link>
                         )}
                       </td>

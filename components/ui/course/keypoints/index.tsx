@@ -8,7 +8,7 @@ export default function Keypoints({ points }: { points: string[] }) {
               {points.map((point, i) => (
                 <div key={point} className="relative">
                   <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-turk text-white">
                       <svg
                         className="h-6 w-6"
                         xmlns="http://www.w3.org/2000/svg"
