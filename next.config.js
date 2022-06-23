@@ -9,7 +9,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["thrangra.sirv.com", "www.cnet.com"],
+    domains: ["thrangra.sirv.com", "www.cnet.com", "i0.wp.com"],
   },
 };
 

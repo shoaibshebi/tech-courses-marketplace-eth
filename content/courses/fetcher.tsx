@@ -10,3 +10,4 @@ export const getAllCourses = () => {
     }, {}),
   };
 };
+// "coverImage": "https://i0.wp.com/www.iedunote.com/img/33350/how-is-blockchain-distinguished-from-bitcoin.jpg",
