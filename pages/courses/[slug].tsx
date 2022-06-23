@@ -18,7 +18,6 @@ export default function Course({ course }: { course: ICourse }) {
     courseState === "deactivated";
   return (
     <>
-      {course.title}
       <div className="py-4">
         <CourseHero
           title={course.title}

@@ -3,11 +3,11 @@
     "id": 1410474,
     "type": "Metaverse Bay",
     "title": "How to buy properties in Metaverse - Full Guide",
-    "description": "Learn modern Next JS(Next 10+). Code everything in Typescript and integrate with Shopify.",
+    "description": "Learn how metaverse works and how you can buy and sell properties into the virtual world of metavers.",
     "coverImage": "/meta1.webp",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/next-js-typescript-with-shopify-integration-full-guide",
-    "slug": "next-js-typescript-with-shopify-integration-full-guide",
+    "link": "#",
+    "slug": "metaverse-how-to-buy-properties",
     "wsl": [
       "Intro to the metaverse stuff",
       "How properties are being created into metavers",
@@ -17,52 +17,52 @@
   },
   {
     "id": 1331625,
-    "type": "Gatsby JS",
-    "title": "Gatsby JS Developer's Guide - Important Parts & Blog App",
-    "description": "Learn popular Gatsby JS(Gatsby v3) framework. Use React/GraphQL to build your own blog page with JAMStack architecture.",
+    "type": "Cryptocurrency",
+    "title": "Learn about cryptocurrencies - How to trade in the market",
+    "description": "Learn popular cryptocurrency The Bitcoin. Use online platforms like Binance to learn how to trade.",
     "coverImage": "/meta2.webp",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/gatsby-js-developer-s-guide-important-parts-blog-app",
-    "slug": "gatsby-js-developer-s-guide-important-parts-blog-app",
+    "link": "#",
+    "slug": "learn-about-cryptocurrencies-how-to-trade-in-the-market",
     "wsl": [
-      "Build Gatsby JS apps on your own",
-      "Build static page apps with modern technologies",
-      "Understand meaning and benefits of JAMStack",
-      "Use GraphQL to your advantage"
+      "Learn about diverse cryptocurrencies",
+      "Learn how to trade with the bitcoin cryptocurrency",
+      "Understand meaning and benefits of crypto",
+      "Use Bitcoin to your advantage"
     ],
     "createdAt": ""
   },
   {
     "id": 1112431,
-    "type": "Unity",
-    "title": "The Complete Unity Guide 3D - Beginner to RPG Game Dev in C#",
-    "description": "Build 3 games & learn Unity practical way! Start with fundamentals and finish with an RPG game. Using Unity 2020 and C#",
+    "type": "Blockchain",
+    "title": "The Complete Blockchain Guide - Beginner to Pro Blockchain Dev in Solidity",
+    "description": "Build 3 project & learn Blockchain in practical way! Start with fundamentals and finish with an PRO developer. Using ES6 and Solidity",
     "coverImage": "/meta3.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/the-complete-unity-guide-3d-beginner-to-rpg-game-dev-in-c",
-    "slug": "the-complete-unity-guide-3d-beginner-to-rpg-game-dev-in-c",
+    "link": "#",
+    "slug": "the-complete-blockchain-guide-beginner-to-pro-blockchain-dev-in-solidity",
     "wsl": [
-      "The practical approach by creating cool games",
-      "Fundamentals and core concepts of game development",
-      "Create a RPG game with tons of features",
+      "The practical approach by creating cool projects",
+      "Fundamentals and core concepts of blockchain development",
+      "Create a advance project with tons of features",
       "Math explanations behind the code."
     ],
     "createdAt": ""
   },
   {
     "id": 985237,
-    "type": "Phaser 3",
-    "title": "Game Development in JS - The Complete Guide (w/ Phaser 3)",
-    "description": "Start building your own games and publish them on Facebook. Learn how to create HTML5 games in Javascript with Phaser 3.",
+    "type": "Cryptocurrency",
+    "title": "Learn about Ethereum cryptocurrency - How to trade in the market",
+    "description": "Learn popular cryptocurrency The Ethereum. Use online platforms like Binance to learn how to trade.",
     "coverImage": "/meta4.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/phaser-3-the-complete-guide-build-publish-games-in-js",
-    "slug": "phaser-3-the-complete-guide-build-publish-games-in-js",
+    "link": "#",
+    "slug": "learn-about-ethereum-cryptocurrency-how-to-trade-in-the-market",
     "wsl": [
-      "Developing games by creating the games",
-      "Fundamentals of game development",
-      "Use Javascript to develop games for Facebook",
-      "Publish your own game on Facebook Instant Games"
+      "Learn about diverse cryptocurrencies",
+      "Learn how to trade with the Ethereum cryptocurrency",
+      "Understand meaning and benefits of crypto",
+      "Use Ethereum to your advantage"
     ],
     "createdAt": ""
   },
@@ -73,7 +73,7 @@
     "description": "Learn how to build a chat app with Electron & React JS. Utilize React JS + Firebase(DB) to create a fully native app",
     "coverImage": "https://thrangra.sirv.com/Electron.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/electron-react-js-build-native-chat-app-with-javascript",
+    "link": "#",
     "slug": "electron-react-js-build-native-chat-app-with-javascript",
     "wsl": [
       "Understand how Electron JS works",
@@ -90,7 +90,7 @@
     "description": "Understand basics and difficult parts of the 3 most popular frameworks - React JS, Angular and Vue. All in one course!",
     "coverImage": "https://thrangra.sirv.com/VueReactAng.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/vue-3-react-angular-guide-to-popular-frameworks",
+    "link": "#",
     "slug": "vue-3-react-angular-guide-to-popular-frameworks",
     "wsl": [
       "Most popular web frameworks -> React, Angular & Vue JS",
@@ -101,16 +101,16 @@
   },
   {
     "id": 847853,
-    "type": "Vue JS",
-    "title": "Vue JS 3 - The Practical Guide",
-    "description": "Understand basic and difficult parts of Vue JS 3 framework. Course is including Vue Router and latest Vue JS 3 features including Composition API.    ",
+    "type": "Hyperledger Fabric",
+    "title": "Hyperledger Fabric - The Practical Guide",
+    "description": "Understand basic and difficult parts of Hyperledger Fabric. Course is including Hyperledger Fabric and latest Composer features including.    ",
     "coverImage": "/meta10.png",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/vue-js-3-the-practical-guide",
-    "slug": "vue-js-3-the-practical-guide",
+    "link": "#",
+    "slug": "hyperledger-fabric-the-practical-guide",
     "wsl": [
       "Features explained on practical examples",
-      "Base and core concepts of Vue JS 3"
+      "Base and core concepts of Hyperledger Fabric"
     ],
     "createdAt": ""
   },
@@ -121,7 +121,7 @@
     "description": "Build Serverless Web Apps with Next.js. Learn Hooks. Deploy to Vercel. Next.js (Next JS 10+), React (React 16+) & Node.",
     "coverImage": "https://thrangra.sirv.com/NextJS.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/complete-next-js-with-react-node-beautiful-portfolio-app",
+    "link": "#",
     "slug": "complete-next-js-with-react-node-beautiful-portfolio-app",
     "wsl": [
       "Develop serverless & classical web applications with the latest Next JS & React",
@@ -133,18 +133,18 @@
   },
   {
     "id": 846120,
-    "type": "React, Angular",
-    "title": "React, Angular, Node In-Depth Guide: Beginner to Pro (2020)",
-    "description": "Beginner to Advance Web Developer Guide. Master Angular (Angular 8+), React + Redux (React 16.12+) & Node with Mongo DB!",
+    "type": "Palkadot, Substrate",
+    "title": "Palkadot Blockchain, Substrate, Next In-Depth Guide: Beginner to Pro (2020)",
+    "description": "Beginner to Advance Blockchain Developer Guide. Master Palkadot, Substrate and Next with Truffle",
     "coverImage": "/meta5.png",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/react-angular-node-in-depth-guide-beginner-to-pro-2020",
-    "slug": "react-angular-node-in-depth-guide-beginner-to-pro-2020",
+    "link": "#",
+    "slug": "palkadot-blockchain-substrate-next-in-depth-guide-beginner-to-pro-2020",
     "wsl": [
-      "Develop Real-world web applications with React, Angular and Node",
-      "Understand the processes and architecture of Angular, React and Node",
+      "Develop Real-world web applications with Palkadot Blockchain & Substrate",
+      "Understand the processes and architecture of Palkadot Blockchain & Substrate",
       "Create own web applications in most demanded frameworks on the market",
-      "Establish yourself in field of the exciting Angular, React and Node web development environment"
+      "Establish yourself in field of the exciting Palkadot Blockchain & Substrate development environment"
     ],
     "createdAt": ""
   },
@@ -155,7 +155,7 @@
     "description": "Create 'real world' React JS applications connected to Firestore (Firebase). Redux, authentication + real time features!",
     "coverImage": "https://thrangra.sirv.com/ReactFirebase.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/react-js-firebase-complete-course-incl-chat-application",
+    "link": "#",
     "slug": "react-js-firebase-complete-course-incl-chat-application",
     "wsl": [
       "Develop real-world web application with React JS and Firebase",
@@ -171,7 +171,7 @@
     "description": "Learn how to create 'real world' Vue JS 2 application connected to Firestore(Firebase) Database.",
     "coverImage": "/meta6.webp",
     "author": "Muhammad Shoaib",
-    "link": "/meta9.webp",
+    "link": "#",
     "slug": "vue-js-2-firebase-complete-course",
     "wsl": [
       "Develop real-world web application with Vue JS 2 and Firebase",
@@ -187,7 +187,7 @@
     "description": "Build your own Blog App with the latest Next.JS & React(Next 9.4+, React hooks). Learn how to use headless Sanity CMS.",
     "coverImage": "/meta7.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/next-js-with-sanity-cms-serverless-blog-app-w-vercel",
+    "link": "#",
     "slug": "next-js-with-sanity-cms-serverless-blog-app-w-vercel",
     "wsl": [
       "Use the latest Next/React features (getStaticProps, getStaticPaths, getServerSideProps)",
@@ -204,7 +204,7 @@
     "description": "Learn GraphQL and Apollo! Create a fast portfolio application in Next.js(Next 9+) / React backed with Apollo + Node.js",
     "coverImage": "https://thrangra.sirv.com/Apollo.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/next-js-and-apollo-portfolio-app-w-react-graphql-node",
+    "link": "#",
     "slug": "next-js-and-apollo-portfolio-app-w-react-graphql-node",
     "wsl": [
       "Develop Real-world web application with Next JS, Apollo and Node",
@@ -215,18 +215,18 @@
   },
   {
     "id": 845151,
-    "type": "Vue JS",
-    "title": "The Complete Vue JS Developer Course – inc. Vue JS 2!",
-    "description": "Build real web apps with Vuex, Router, Node! Master Vue Js and Vue JS 2!",
+    "type": "NFT (Non-Fungible Tokens)",
+    "title": "The Complete NFT (Non-Fungible Tokens) Course | Self Promo App",
+    "description": "Learn real things with NFT (Non-Fungible Tokens) and know how you can upload it to the market place",
     "coverImage": "/meta8.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/the-complete-vue-js-developer-course-inc-vue-js-2",
-    "slug": "the-complete-vue-js-developer-course-inc-vue-js-2",
+    "link": "#",
+    "slug": "the-complete-nft-non-fungible-tokens-course-self-promo-app",
     "wsl": [
-      "Develop powerful, modern, real-world web applications with Vue JS 2 and Node",
-      "Completely understand the processes and concepts of Vue JS 2",
-      "Use gained knowledge to create your own Web Applications",
-      "Become fluent in concepts and tools like Vuex, MongoDb, Sockets, Authentication"
+      "Learn about diverse Non-Fungible Tokens'  types",
+      "Learn how to trade with the Non-Fungible Tokens",
+      "Understand meaning and benefits of Non-Fungible Tokens",
+      "Use Non-Fungible Tokens to your advantage"
     ],
     "createdAt": ""
   },
@@ -237,7 +237,7 @@
     "description": "Complete Developer Guide covering Vue.js and Nuxt.js basic to advance concepts. Get your hands on real projects.",
     "coverImage": "https://thrangra.sirv.com/NuxtJS.jpeg",
     "author": "Muhammad Shoaib",
-    "link": "https://academy.eincode.com/courses/the-complete-nuxt-js-vue-js-course-self-promo-app",
+    "link": "#",
     "slug": "the-complete-nuxt-js-vue-js-course-self-promo-app",
     "wsl": [
       "Develop powerful, modern, real-world web applications with Nuxt JS, Vue JS 2 and Node",
