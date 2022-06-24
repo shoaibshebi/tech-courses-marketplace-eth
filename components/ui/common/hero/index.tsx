@@ -17,11 +17,10 @@ export default function Hero() {
           Welcome To The World Of Tech & Metaverse
         </div>
         <div className="text-6xl font-semibold text-gray-900 leading-none my-3">
-          Only Crypto Allowed To Make Trx
+          Trxs Only Using The Crypto!
         </div>
         <div className="mt-6 text-xl font-light text-true-gray-500 antialiased">
-          You can learn here how to buy virtual properties, programming and
-          blockchain the easy way!
+          Learn here how to buy virtual properties and blockchain the easy way!
         </div>
         <div className="mt-5 sm:mt-8 flex lg:justify-start">
           <div className="rounded-full shadow">

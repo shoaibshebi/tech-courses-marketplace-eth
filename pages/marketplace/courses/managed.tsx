@@ -69,7 +69,7 @@ export default function ManagedCourses() {
   return (
     <>
       <MarketHeader />
-      <CourseFilter />
+      {/* <CourseFilter /> */}
       <section className="grid grid-cols-1">
         {managedCourses.data?.map((course: any, i: number) => (
           <ManagedCourseCard key={i} course={course}>

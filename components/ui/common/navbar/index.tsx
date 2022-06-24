@@ -1,11 +1,10 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useWeb3 } from "@components/providers";
 import { useAccount } from "@components/hooks/web3";
 import ActiveLink from "../link";
 
 export default function Navbar() {
-  const { connect, connected, web3 } = useWeb3();
+  const { connect, connected, web3, provider } = useWeb3();
   const { pathname } = useRouter();
   const { account } = useAccount();
 
@@ -20,7 +19,7 @@ export default function Navbar() {
     >
       <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
-          <div className="flex flex-col xs:flex-row justify-between">
+          <div className="flex flex-col xs:flex-row justify-between items-center">
             <div>
               <ActiveLink href="/">
                 <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
@@ -29,7 +28,7 @@ export default function Navbar() {
               </ActiveLink>
               <ActiveLink href="/marketplace">
                 <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
-                  Marketplace
+                  Buy Here
                 </a>
               </ActiveLink>
               <ActiveLink href="/blog">
@@ -45,23 +44,42 @@ export default function Navbar() {
             </div>
             <div className="text-center flex items-center justify-center">
               {account?.data && !pathname.includes("/marketplace") && (
-                <div className="flex justify-end pt-1 sm:px-6 lg:px-8 mt-2">
-                  <div className="text-white bg-turk rounded-md p-2">
+                <div className="flex justify-end sm:px-6 lg:px-8">
+                  <div className="text-white bg-turk rounded-md p-2 text-xs">
                     {account?.data}
                   </div>
                 </div>
               )}
-              <a
-                href="#"
-                onClick={connect}
-                className="px-8 py-3 border-2 rounded-full text-base font-medium text-black border-turk hover:text-white hover:bg-turk"
+              {!provider && (
+                <div className="flex justify-end sm:px-6 lg:px-8">
+                  <div className="text-white bg-turk rounded-md p-2">
+                    <a target="_blank" href="https://metamask.io/">
+                      Install Metamask!
+                    </a>
+                  </div>
+                </div>
+              )}
+              <button
+                className={`${
+                  !provider && "disabled:opacity-10 disabled:cursor-not-allowed"
+                } `}
               >
-                {connected
-                  ? account.isAdmin
-                    ? "Hi there admin"
-                    : "Hi there user"
-                  : "Connect"}
-              </a>
+                <a
+                  href="#"
+                  onClick={connect}
+                  className={`px-8 py-3 ${
+                    !provider && "opacity-50 disabled:cursor-not-allowed"
+                  } border-2 rounded-full text-base font-medium text-black border-turk ${
+                    provider && "hover:text-white hover:bg-turk"
+                  }`}
+                >
+                  {account?.data
+                    ? account.isAdmin
+                      ? "Hi there admin"
+                      : "Hi there user"
+                    : "Connect"}
+                </a>
+              </button>
             </div>
           </div>
         </nav>
