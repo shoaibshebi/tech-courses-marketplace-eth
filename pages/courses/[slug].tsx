@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { ICourse } from "types";
 import { Message, Modal } from "@components/ui/common";
 import { BaseLayout } from "@components/ui/layout";

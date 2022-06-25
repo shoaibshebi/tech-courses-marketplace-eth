@@ -1,5 +1,3 @@
-import { Button } from "@components/ui/common";
-
 export default function CourseFilter() {
   return (
     <div className="flex flex-col md:flex-row items-center my-4">
@@ -11,7 +9,7 @@ export default function CourseFilter() {
           className="w-52 xs:w-96 focus:ring-turk shadow-md focus:border-turk block pl-7 p-4 sm:text-sm border-gray-300 rounded-md"
           placeholder="0x2341ab..."
         />
-        <Button>Search</Button>
+        {/* <Button>Search</Button> */}
       </div>
       <div className="relative text-gray-700">
         <select

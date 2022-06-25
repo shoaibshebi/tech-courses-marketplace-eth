@@ -1,4 +1,5 @@
-import React from "react";
+// @ts-nocheck
+https: import React from "react";
 import ActiveLink from "../link";
 
 const BreadcrumbItem = ({ item, index }) => {

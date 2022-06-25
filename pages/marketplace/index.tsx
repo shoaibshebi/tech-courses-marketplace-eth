@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState } from "react";
 import { CourseCard, CourseList } from "@components/ui/course";
 import { BaseLayout } from "@components/ui/layout";

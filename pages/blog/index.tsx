@@ -1,5 +1,4 @@
 import { BaseLayout } from "@components/ui/layout";
-import Image from "next/image";
 
 export default function Blog() {
   return (

@@ -1,5 +1,4 @@
-import type { NextPage } from "next";
-
+// @ts-nocheck
 import { Hero } from "@components/ui/common";
 import { CourseList, CourseCard } from "@components/ui/course";
 import { BaseLayout } from "@components/ui/layout";

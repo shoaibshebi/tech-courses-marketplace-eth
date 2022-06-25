@@ -73,7 +73,7 @@ export default function Web3Provider({ children }: IProps) {
   //its for the pupose to connect the provider to the metmask account,
   //and also extending the web3Api useState variable
   const _web3Api = useMemo(() => {
-    const { provider, web3, isLoading } = web3Api;
+    const { provider, web3, contract, isLoading } = web3Api;
     return {
       ...web3Api,
       requireInstall: !isLoading && !web3,

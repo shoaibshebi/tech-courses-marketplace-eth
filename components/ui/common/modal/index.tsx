@@ -1,5 +1,4 @@
-import { Children } from "react";
-
+// @ts-nocheck
 export default function Modal({ isOpen, children }) {
   return (
     <section>

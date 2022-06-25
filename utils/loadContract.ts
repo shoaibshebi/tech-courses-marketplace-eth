@@ -6,7 +6,7 @@ if (process.env.NODE_ENV !== "production") {
   NETWORK_ID = process.env.DEV_NEXT_PUBLIC_NETWORK_ID;
 }
 
-export const loadContract = async (name: string, web3: object) => {
+export const loadContract = async (name: string, web3: { eth: any }) => {
   const res = await fetch(`/contracts/${name}.json`);
 
   const Artifact = await res.json();

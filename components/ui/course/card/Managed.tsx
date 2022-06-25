@@ -1,3 +1,4 @@
+// @ts-nocheck
 const Item = ({ title, value, className }) => {
   return (
     <div className={`${className} px-4 py-5  sm:px-6`}>

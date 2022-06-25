@@ -1,8 +1,8 @@
+// @ts-nocheck
 import { useState } from "react";
-
 import { useAdmin, useManagedCourses } from "@components/hooks/web3";
 import { Button, Message } from "@components/ui/common";
-import { CourseFilter, ManagedCourseCard } from "@components/ui/course";
+import { ManagedCourseCard } from "@components/ui/course";
 import { BaseLayout } from "@components/ui/layout";
 import { MarketHeader } from "@components/ui/marketplace";
 import { useWeb3 } from "@components/providers";

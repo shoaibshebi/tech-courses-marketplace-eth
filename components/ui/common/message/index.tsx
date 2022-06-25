@@ -6,7 +6,13 @@ const TYPES = {
   danger: "red",
 };
 
-export default function Message({ children, type = "success" }) {
+export default function Message({
+  children,
+  type = "success",
+}: {
+  children: any;
+  type: string;
+}) {
   const [isDisplayed, setIsDisplayed] = useState(true);
 
   if (!isDisplayed) {

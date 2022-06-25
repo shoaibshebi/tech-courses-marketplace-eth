@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { ICourse, IChildrenProp } from "types";
+import { ICourse } from "types";
 
 export default function List({
   courses,

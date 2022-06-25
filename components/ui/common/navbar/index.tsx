@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useRouter } from "next/router";
 import { useWeb3 } from "@components/providers";
 import { useAccount } from "@components/hooks/web3";
