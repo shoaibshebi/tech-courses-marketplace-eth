@@ -36,7 +36,7 @@ export default function Walletbar() {
               )}
               {network.data && (
                 <div>
-                  <span>Currently on </span>
+                  <span>Currently on network: </span>
                   <strong className="text-2xl">{network.data}</strong>
                 </div>
               )}

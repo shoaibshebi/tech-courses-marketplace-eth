@@ -51,7 +51,7 @@ contract CourseMarketplace{
 
      //abi and msg are two objects globally available in the Contract
      function purchaseCourse(bytes16 courseId, bytes32 proof) external payable { 
-         
+
          bytes32 courseHash = keccak256(abi.encodePacked(courseId, msg.sender));
          if(hasCourseOwnership(courseHash)){
              revert CourseHasOwner();
@@ -65,6 +65,15 @@ contract CourseMarketplace{
              owner: msg.sender,
              state: State.Purchased
          });
+     }
+     function dropCourse(bytes16 courseId) external payable { 
+         bytes32 courseHash = keccak256(abi.encodePacked(courseId, msg.sender));
+         if(!hasCourseOwnership(courseHash)){
+             revert CourseHasOwner();
+         }
+         uint id =  totalOwnedCourses--;
+         delete ownedCourseHashById[id];
+         delete ownedCourses[courseHash];
      }
      function repurchaseCourse(bytes32 courseHash) external payable { 
          if(!isCourseCreated(courseHash)){

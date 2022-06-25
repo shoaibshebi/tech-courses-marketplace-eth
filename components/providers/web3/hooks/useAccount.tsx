@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useSWR from "swr";
 
 const adminAddresses = {
@@ -20,7 +20,6 @@ export const handler = (web3: any, provider: any) => () => {
       return account;
     }
   );
-  console.log("keccak256", web3?.utils?.keccak256(data ?? ""), data);
 
   useEffect(() => {
     const mutator = (accounts: any) => mutate(accounts[0] ?? null);
@@ -33,10 +32,10 @@ export const handler = (web3: any, provider: any) => () => {
 
   return {
     data,
-    isAdmin:
-      (data && adminAddresses[web3?.utils?.keccak256(data) as keyof unknown]) ??
-      false,
+    isAdmin: false,
     mutate,
     ...rest,
   };
 };
+// (data && adminAddresses[web3?.utils?.keccak256(data) as keyof unknown]) ??
+// false,

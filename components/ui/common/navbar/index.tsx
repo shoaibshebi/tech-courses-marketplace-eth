@@ -43,22 +43,17 @@ export default function Navbar() {
               </ActiveLink>
             </div>
             <div className="text-center flex items-center justify-center">
-              {account?.data && !pathname.includes("/marketplace") && (
+              {
                 <div className="flex justify-end sm:px-6 lg:px-8">
-                  <div className="text-white bg-turk rounded-md p-2 text-xs">
-                    {account?.data}
-                  </div>
-                </div>
-              )}
-              {!provider && (
-                <div className="flex justify-end sm:px-6 lg:px-8">
-                  <div className="text-white bg-turk rounded-md p-2">
+                  <div className="text-white text-xs bg-turk rounded-md p-2">
                     <a target="_blank" href="https://metamask.io/">
-                      Install Metamask!
+                      {account?.data && provider
+                        ? account?.data
+                        : "Install Metamask!"}
                     </a>
                   </div>
                 </div>
-              )}
+              }
               <button
                 className={`${
                   !provider && "disabled:opacity-10 disabled:cursor-not-allowed"
@@ -73,11 +68,7 @@ export default function Navbar() {
                     provider && "hover:text-white hover:bg-turk"
                   }`}
                 >
-                  {account?.data
-                    ? account.isAdmin
-                      ? "Hi there admin"
-                      : "Hi there user"
-                    : "Connect"}
+                  {account?.data ? "Hi Meta Lover" : "Connect"}
                 </a>
               </button>
             </div>
