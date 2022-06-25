@@ -18,6 +18,7 @@ export default function Walletbar() {
               <a
                 href="https://www.youtube.com/watch?v=YVgfHZMFFFQ"
                 target="_blank"
+                rel="noreferrer"
               >
                 Don't have account on metamask ? Click here
               </a>

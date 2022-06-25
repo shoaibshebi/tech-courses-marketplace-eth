@@ -12,8 +12,8 @@ export default function Blog() {
         </div>
         TO HEAR TECH CEOs like Mark Zuckerberg or Satya Nadella talk about it,
         the metaverse is the future of the internet. Or it's a video game. Or
-        maybe it's a deeply uncomfortable, worse version of Zoom? It's hard to
-        say. <br />
+        maybe it&apos;s a deeply uncomfortable, worse version of Zoom? It's hard
+        to say. <br />
         <br /> It's been nearly six months since Facebook announced it was
         rebranding to Meta and would focus its future on the upcoming
         “metaverse.” In the time since, what that term means hasn't gotten any
@@ -164,6 +164,7 @@ export default function Blog() {
           Read complete on here:{" "}
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.wired.com/story/what-is-the-metaverse/"
           >
             https://www.wired.com/story/what-is-the-metaverse

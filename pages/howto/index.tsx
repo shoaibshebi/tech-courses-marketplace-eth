@@ -36,6 +36,7 @@ export default function Howto() {
               import account into the `metamask` please follow{" "}
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.youtube.com/watch?v=lv4HEyiw4EQ"
               >
                 this tutorial

@@ -47,7 +47,11 @@ export default function Navbar() {
               {
                 <div className="flex justify-end sm:px-6 lg:px-8">
                   <div className="text-white text-xs bg-turk rounded-md p-2">
-                    <a target="_blank" href="https://metamask.io/">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://metamask.io/"
+                    >
                       {account?.data && provider
                         ? account?.data
                         : "Install Metamask!"}
