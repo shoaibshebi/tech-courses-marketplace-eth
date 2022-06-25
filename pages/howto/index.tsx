@@ -8,9 +8,46 @@ export default function Howto() {
         <img src="/how to.jpeg" />
       </div>
       <div>
-        <p className="text-3xl font-semibold text-gray-900 leading-none">
-          HowTo Steps to purchase the course:
-        </p>
+        <div className="text-center">
+          <p className="text-3xl font-semibold text-gray-900 leading-none">
+            Steps to purchase the course:
+          </p>
+          <p className="text-sm leading-none flex justify-center">
+            These are the instructions to buy course on website running at live
+            server at Rinkeby network
+          </p>
+        </div>
+        <div className="list-container">
+          <ol className="list">
+            <li className="item">
+              First of all install metamask extension in your browser
+            </li>
+            <li className="item">
+              Create account on `metamask`, save you secret key and login to
+              metamask.
+            </li>
+            <li className="item">
+              You should have amount in you Rinkeby network account to buy the
+              course
+            </li>
+            <li className="item">
+              This is all the process you have to follow. If found any issue, DM
+              me on @shoaib_shebi twitter
+            </li>
+            <p>Enjoy 🥂</p>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <div className="text-center">
+          <p className="text-3xl font-semibold text-gray-900 leading-none ">
+            Steps to purchase the course:
+          </p>
+          <p className="text-sm leading-none">
+            These are the instructions for local setup on you system at Ganache
+            network
+          </p>
+        </div>
         <div className="list-container">
           <ol className="list">
             <li className="item">
