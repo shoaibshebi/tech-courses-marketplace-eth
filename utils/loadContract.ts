@@ -1,9 +1,9 @@
 let NETWORK_ID: any = "";
 if (process.env.NODE_ENV === "production") {
-  NETWORK_ID = process.env.PROD_NEXT_PUBLIC_NETWORK_ID;
+  NETWORK_ID = process.env.NEXT_PUBLIC_PROD_NETWORK_ID;
 }
 if (process.env.NODE_ENV !== "production") {
-  NETWORK_ID = process.env.DEV_NEXT_PUBLIC_NETWORK_ID;
+  NETWORK_ID = process.env.NEXT_PUBLIC_DEV_NETWORK_ID;
 }
 
 export const loadContract = async (name: string, web3: { eth: any }) => {

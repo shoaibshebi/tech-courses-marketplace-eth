@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useSWR, { mutate } from "swr";
 
 const NETWORKS = {
@@ -14,12 +14,12 @@ let targetNetwork = "";
 
 if (process.env.NODE_ENV === "production") {
   targetNetwork =
-    NETWORKS[process.env.PROD_NEXT_PUBLIC_TARGET_CHAIN_ID as keyof unknown];
+    NETWORKS[process.env.NEXT_PUBLIC_PROD_TARGET_CHAIN_ID as keyof unknown];
 }
 
 if (process.env.NODE_ENV !== "production") {
   targetNetwork =
-    NETWORKS[process.env.DEV_NEXT_PUBLIC_TARGET_CHAIN_ID as keyof unknown];
+    NETWORKS[process.env.NEXT_PUBLIC_DEV_TARGET_CHAIN_ID as keyof unknown];
 }
 
 export const handler = (web3: any, provider: any) => () => {

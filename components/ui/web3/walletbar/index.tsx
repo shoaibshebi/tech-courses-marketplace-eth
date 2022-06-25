@@ -29,7 +29,7 @@ export default function Walletbar() {
                 <div className="bg-red-400 p-4 rounded-lg">
                   <div>Connected to wrong network</div>
                   <div>
-                    Connect to: {` `}
+                    Connect to:{" "}
                     <strong className="text-2xl">{network.target}</strong>
                   </div>
                 </div>
