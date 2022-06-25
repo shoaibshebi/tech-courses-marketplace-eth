@@ -5,14 +5,22 @@ const NETWORKS = {
   1: "Ethereum Main Network",
   2: "Ropsten Test Network",
   4: "Rinkeby Test Network",
-  5: "Rinkeby Test Network",
   42: "Kovan Test Network",
   56: "Binance Smart Chain",
   1337: "Ganache",
 };
 
-const targetNetwork =
-  NETWORKS[process.env.NEXT_PUBLIC_TARGET_CHAIN_ID as keyof unknown];
+let targetNetwork = "";
+
+if (process.env.NODE_ENV === "production") {
+  targetNetwork =
+    NETWORKS[process.env.PROD_NEXT_PUBLIC_TARGET_CHAIN_ID as keyof unknown];
+}
+
+if (process.env.NODE_ENV !== "production") {
+  targetNetwork =
+    NETWORKS[process.env.DEV_NEXT_PUBLIC_TARGET_CHAIN_ID as keyof unknown];
+}
 
 export const handler = (web3: any, provider: any) => () => {
   const { data, mutate, ...rest } = useSWR(

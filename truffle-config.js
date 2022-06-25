@@ -1,3 +1,5 @@
+require("dotenv").config();
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -18,11 +20,6 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
-//
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
-
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -35,6 +32,18 @@ module.exports = {
    */
   contracts_build_directory: "./public/contracts",
   networks: {
+    rinkeby: {
+      provider: () => {
+        return new HDWalletProvider(
+          process.env.MNEMONIC,
+          "https://rinkeby.infura.io/v3/" + process.env.INFURA_PROJECT_ID
+        );
+      },
+      network_id: 4,
+      gas: 6700000,
+      gasPrice: 10000000000,
+      skipDryRun: true,
+    },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
