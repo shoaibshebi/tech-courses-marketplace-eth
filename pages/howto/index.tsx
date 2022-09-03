@@ -14,7 +14,7 @@ export default function Howto() {
           </p>
           <p className="text-sm leading-none flex justify-center">
             These are the instructions to buy course on website running at live
-            server at Rinkeby network
+            server at Goerli network
           </p>
         </div>
         <div className="list-container">
@@ -27,7 +27,7 @@ export default function Howto() {
               metamask.
             </li>
             <li className="item">
-              You should have amount in you Rinkeby network account to buy the
+              You should have amount in you Goerli network account to buy the
               course
             </li>
             <li className="item">
